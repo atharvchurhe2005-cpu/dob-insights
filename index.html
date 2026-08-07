@@ -4,31 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - DOB Insights</title>
-    <link rel="stylesheet" href="static/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="container nav-container">
-            <div class="logo">DOB</div>
+            <a href="index.html" class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="10" fill="url(#logoGrad)"/>
+                    <path d="M12 28V12h6c5.5 0 8 3 8 8s-2.5 8-8 8h-6zm3-3h3c3.5 0 5-2 5-5s-1.5-5-5-5h-3v10z" fill="white"/>
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#3b82f6"/>
+                            <stop offset="100%" stop-color="#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Digital One Box</span>
+            </a>
             <div class="nav-links">
-                <a href="index.html">Home</a>
+                <a href="index.html">Reports</a>
                 <a href="https://digitalonebox.com" target="_blank">Company</a>
             </div>
         </div>
     </nav>
+    
     <header class="hero">
         <div class="container">
+            <div class="hero-badge">Weekly Intelligence</div>
             <h1>DOB Insights</h1>
-            <p>Weekly Web3, Blockchain & AI Intelligence by Digital One Box</p>
+            <p>Web3, Blockchain & AI Market Intelligence by Digital One Box</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">1000+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">30+</span>
+                    <span class="stat-label">Engineers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">50+</span>
+                    <span class="stat-label">Countries</span>
+                </div>
+            </div>
         </div>
     </header>
+    
     <main class="container">
         
-<section class="intro">
+<section class="intro fade-in">
     <h2>Latest Industry Reports</h2>
-    <p>Stay ahead with our weekly analysis on blockchain development, Web3 trends, and AI innovation.</p>
+    <p>Weekly analysis on blockchain development, Web3 trends, and AI innovation — curated by DOB's research team.</p>
 </section>
+
 <section class="posts-grid">
     
     <article class="post-card">
@@ -42,21 +72,55 @@
     </article>
     
 </section>
-<section class="cta-section">
-    <h2>Need a Web3 Partner?</h2>
-    <p>From smart contracts to full-scale dApps, Digital One Box delivers.</p>
-    <a href="https://digitalonebox.com" class="cta-btn" target="_blank">Visit DOB →</a>
+
+<section class="cta-section fade-in">
+    <div class="cta-content">
+        <h2>Need a Web3 Partner?</h2>
+        <p>From smart contracts to full-scale dApps, Digital One Box delivers enterprise-grade blockchain solutions.</p>
+        <a href="https://digitalonebox.com" class="cta-btn" target="_blank">
+            Visit DOB
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </div>
 </section>
 
     </main>
+    
     <footer>
         <div class="container">
-            <p>Powered by <strong>Digital One Box</strong> | Auto-generated with Python</p>
-            <p class="footer-links">
-                <a href="https://digitalonebox.com">Website</a> | 
+            <div class="footer-logo">
+                <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="10" fill="url(#logoGrad2)"/>
+                    <path d="M12 28V12h6c5.5 0 8 3 8 8s-2.5 8-8 8h-6zm3-3h3c3.5 0 5-2 5-5s-1.5-5-5-5h-3v10z" fill="white"/>
+                    <defs>
+                        <linearGradient id="logoGrad2" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#3b82f6"/>
+                            <stop offset="100%" stop-color="#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Digital One Box</span>
+            </div>
+            <p class="footer-text">Auto-generated with Python | Updates Weekly</p>
+            <div class="footer-links">
+                <a href="https://digitalonebox.com">Website</a>
+                <a href="https://digitalonebox.com/#services">Services</a>
                 <a href="https://github.com/atharvchurhe2005-cpu">GitHub</a>
-            </p>
+            </div>
         </div>
     </footer>
+    
+    <script>
+        // Smooth scroll animation on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.post-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = (index * 0.1) + 's';
+                card.classList.add('fade-in-up');
+            });
+        });
+    </script>
 </body>
 </html>
